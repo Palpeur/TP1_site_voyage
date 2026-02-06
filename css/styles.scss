@@ -55,6 +55,7 @@ body {
 h1 {
 	display: block;
 	text-align: center;
+	line-height: 2.5rem;
 }
 
 h2 {
@@ -93,6 +94,7 @@ header {
 
 			.logo {
 				display: block;
+				text-align: center;
 				font-size: 2em;
 				margin-block-start: 0.67em;
 				margin-block-end: 0.67em;
@@ -106,9 +108,6 @@ header {
 
 			img {
 				width: 15%;
-
-
-
 			}
 		}
 
@@ -266,20 +265,87 @@ form {
 
 /*--------------accessibilité------------*/
 .texte-pour-lecteur {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
 }
 
 
 /*-------------media querry--------------*/
-@media screen {
-	
+@media screen and (max-width: 1184px) {
+	nav {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 1084px) {
+	header {
+		#logo-anime {
+			width: 25%;
+		}
+
+		nav {
+			width: 60%;
+		}
+	}
+}
+
+@media screen and (max-width: 855px) {
+	header {
+		#logo-anime {
+			width: 30%;
+		}
+
+		nav {
+			width: 80%;
+		}
+	}
+
+	.flex-destination {
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		.logo-flex {
+			img {
+				display: none;
+			}
+		}
+
+		nav {
+			width: 60%;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		nav {
+			width: 70%;
+
+			ul {
+				margin-top: 0;
+				margin-bottom: 10px;
+
+				li {
+					margin-top: 30px;
+
+					.button {
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
 }

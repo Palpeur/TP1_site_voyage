@@ -45,6 +45,7 @@ body {
 h1 {
   display: block;
   text-align: center;
+  line-height: 2.5rem;
 }
 
 h2 {
@@ -82,6 +83,7 @@ header .header-flex .logo-flex {
 }
 header .header-flex .logo-flex .logo {
   display: block;
+  text-align: center;
   font-size: 2em;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
@@ -224,4 +226,54 @@ form h1 {
   word-wrap: normal !important;
 }
 
-/*-------------media querry--------------*//*# sourceMappingURL=styles.css.map */
+/*-------------media querry--------------*/
+@media screen and (max-width: 1184px) {
+  nav {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1084px) {
+  header #logo-anime {
+    width: 25%;
+  }
+  header nav {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 855px) {
+  header #logo-anime {
+    width: 30%;
+  }
+  header nav {
+    width: 80%;
+  }
+  .flex-destination {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .logo-flex img {
+    display: none;
+  }
+  header nav {
+    width: 60%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  header nav {
+    width: 70%;
+  }
+  header nav ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  header nav ul li {
+    margin-top: 30px;
+  }
+  header nav ul li .button, header .header-flex nav ul li a, header nav ul li form button[type=submit], form header nav ul li button[type=submit],
+  header nav ul li form [type=reset],
+  form header nav ul li [type=reset] {
+    padding: 5px;
+  }
+}/*# sourceMappingURL=styles.css.map */
