@@ -1,0 +1,43 @@
+#page3 {
+    line-height: 2.5rem;
+
+    h1 {
+        text-align: left;
+    }
+
+    section {
+        display: flex;
+        margin-bottom: 60px;
+
+        div {
+            display: flex;
+
+            img {
+                max-width: 100%;
+                width: 40%;
+                border-radius: 20px;
+            }
+
+            p {
+                padding-left: 40px;
+            }
+        }
+
+        table {
+            th {
+                background-color: rgb(31, 172, 190); 
+            }
+            tr{
+                td {
+                    padding: 10px;
+                    background-color: white;
+                }
+
+                td:last-child {
+                    background-color: rgb(133, 136, 136);
+                }
+            }
+        }
+    }
+
+}
