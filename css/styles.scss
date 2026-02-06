@@ -141,10 +141,11 @@ header {
 
 main {
 	li {
-		transition: transform 0.3s;
+		transition: all 0.3s;
 
 		&:hover {
 			transform: translateY(-$espace-moyen);
+			box-shadow: -20px 17px 3px 0px rgba(0, 0, 0, 0.1);
 		}
 	}
 }
@@ -188,7 +189,7 @@ footer {
 	li {
 		border: darken($couleur_destination, 10%) solid $espace-petit;
 		border-radius: $espace-moyen;
-		margin: $espace-petit;
+		margin: $espace-moyen;
 		background-color: $couleur_destination;
 
 		img {
@@ -212,7 +213,7 @@ footer {
 	animation: avion 3s ease-in;
 }
 
-.info-animation{
+.info-animation {
 	display: flex;
 }
 
@@ -294,10 +295,15 @@ form {
 			width: 60%;
 		}
 	}
-	footer{
-		.info-animation{
-	flex-direction: column;
-}
+
+	.flex-destination {
+		flex-direction: column;
+	}
+
+	footer {
+		.info-animation {
+			flex-direction: column;
+		}
 	}
 }
 
@@ -312,9 +318,7 @@ form {
 		}
 	}
 
-	.flex-destination {
-		flex-direction: column;
-	}
+
 
 }
 

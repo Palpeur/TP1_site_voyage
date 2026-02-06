@@ -111,10 +111,11 @@ header .header-flex nav ul li:hover {
   transform: translateY(-10px);
 }
 main li {
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 main li:hover {
   transform: translateY(-20px);
+  box-shadow: -20px 17px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -147,7 +148,7 @@ footer .footer-flex {
 .flex-destination li {
   border: rgb(17.625, 123.375, 52.875) solid 10px;
   border-radius: 20px;
-  margin: 10px;
+  margin: 20px;
   background-color: #18a848;
 }
 .flex-destination li img {
@@ -238,6 +239,9 @@ form h1 {
   header nav {
     width: 60%;
   }
+  .flex-destination {
+    flex-direction: column;
+  }
   footer .info-animation {
     flex-direction: column;
   }
@@ -248,9 +252,6 @@ form h1 {
   }
   header nav {
     width: 80%;
-  }
-  .flex-destination {
-    flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {
