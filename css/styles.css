@@ -168,9 +168,8 @@ footer .footer-flex {
   animation: avion 3s ease-in;
 }
 
-.cours-3 {
-  font-size: 5rem;
-  text-align: center;
+.info-animation {
+  display: flex;
 }
 
 /*------------------form-----------------*/
@@ -238,6 +237,9 @@ form h1 {
   }
   header nav {
     width: 60%;
+  }
+  footer .info-animation {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 855px) {
