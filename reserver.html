@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Air Voyage</title>
+    <link rel="icon" href="images/plane_10829976.png">
+</head>
+
+<body>
+    <a href="#contenu">
+        <span class="texte-pour-lecteur">Aller au contenu principal</span>
+    </a>
+    <header>
+        <div class="container header-flex">
+            <div class="logo-flex">
+                <a class="logo" href="index.html">Air Voyage</a>
+                <img src="images/3324544.png" alt="avion logo">
+            </div>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="reserver.html" id="active">Réserver</a></li>
+                    <li><a href="page3.html">Page 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenu" class="container" aria-label="Contenu principale">
+        <h1>Formulaire de réservation</h1>
+        <form action="traitement.php" method="post" aria-label="Formulaire de Voyage">
+            <div >
+                <div>
+                    <label for="prenom">Prénom <span>*</span></label>
+                    <input id="prenom" type="text" name="prenom" required>
+                </div>
+                <div>
+                    <label for="nom">Nom <span>*</span></label>
+                    <input id="nom" type="text" name="nom" required>
+                </div>
+                <div>
+                    <label for="email">Courriel <span>*</span></label>
+                    <input id="email" type="email" name="email" placeholder="xyz@email" required>
+                </div>
+                <div>
+                    <label for="selc-destination">Destination <span>*</span></label>
+                    <select name="selc-destination" id="selc-destination" required>
+                        <option value="" selected>-</option>
+                        <option value="Norvège">Norvège</option>
+                        <option value="Grèce">Grèce</option>
+                        <option value="Japon">Japon</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Date de départ <span>*</span></label>
+                    <input id="date" type="date" value="date_depart" required>
+                </div>
+                <div>
+                    <label for="nbrs_personne">Nombre de personnes <span>*</span></label>
+                    <input  id="nbrs_personne" type="number" value="nbrs_personne" required min="1" max="10" placeholder="0">
+                </div>
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="container footer-flex">
+            <p>Site réalisé par : <strong>Jean-Philippe Beaudoin</strong> </p>
+            <p> Dans le cadre du programme Technique de l'informatique - Cégep Garneau</p>
+        </div>
+    </footer>
+</body>
+
+</html>

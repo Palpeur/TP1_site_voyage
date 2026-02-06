@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+/*---------------------------------------*/
+$texte: #272727;
+$background: #1ae475;
+$couleur_destination: #18a848;
+$header: #29ceeb;
+$footer: #f0e585;
+
+$espace-petit: 10px;
+$espace-moyen: 20px;
+$espace-grand: 40px;
+
+.font {
+	color: $texte;
+	font-size: 1.5rem;
+	font-family: "Saira", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.8rem;
+}
+
+.button {
+	padding: $espace-petit $espace-petit;
+	border-radius: $espace-moyen;
+	background-color: lighten($header, 10%);
+	border: darken($header, 10%) solid 5px;
+}
+
+/*--------------général------------------*/
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+
+}
+
+body {
+	@extend .font;
+	margin: 0;
+	padding: 0;
+	background-color: $background;
+}
+
+.container {
+	width: 90%;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+/*------------------Titre----------------*/
+h1 {
+	display: block;
+	text-align: center;
+}
+
+h2 {
+	margin: $espace-moyen 0 $espace-petit $espace-petit;
+}
+
+
+/*---------composante général------------*/
+img {
+	max-width: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $texte;
+}
+
+span {
+	color: rgb(167, 10, 41);
+}
+
+/*--------------header/footer------------*/
+header {
+	background-color: $header;
+	border-bottom: lighten($header, 20%) solid $espace-moyen;
+
+	.header-flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		.logo-flex {
+			display: flex;
+			align-items: center;
+
+			.logo {
+				display: block;
+				font-size: 2em;
+				margin-block-start: 0.67em;
+				margin-block-end: 0.67em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				font-weight: bold;
+				margin-right: $espace-moyen;
+				text-decoration: none;
+				color: $texte;
+			}
+
+			img {
+				width: 15%;
+
+
+
+			}
+		}
+
+		nav {
+
+			ul {
+				padding: 0;
+
+				li {
+					text-decoration: none;
+					display: inline-block;
+					padding-right: $espace-moyen;
+					font-weight: bold;
+					transition: all 0.3s;
+
+
+					&:hover {
+						transform: translateY(-$espace-petit);
+					}
+
+					a {
+						@extend .button;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+main {
+	li {
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: translateY(-$espace-moyen);
+		}
+	}
+}
+
+footer {
+	background-color: $footer;
+	padding: $espace-moyen 0;
+	border-top: lighten($footer, 10%) solid $espace-moyen;
+
+	.footer-flex {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+/*---------------animation---------------*/
+
+@keyframes avion {
+	0% {
+		opacity: 0;
+		transform: translateX(-400px);
+	}
+
+	50% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {}
+}
+
+
+/*--------------------flex---------------*/
+
+
+.flex-destination {
+	display: flex;
+	list-style: none;
+	padding: 0;
+
+	li {
+		border: darken($couleur_destination, 10%) solid $espace-petit;
+		border-radius: $espace-moyen;
+		margin: $espace-petit;
+		background-color: $couleur_destination;
+
+		img {
+			width: 100%;
+			border-radius: $espace-petit;
+		}
+
+		p {
+			padding: $espace-petit;
+		}
+	}
+}
+
+/*------------class autre----------------*/
+#active {
+	background-color: darken($header, 15%);
+	border-color: darken($header, 20%);
+}
+
+.accueil {
+	animation: avion 3s ease-in;
+}
+
+.cours-3 {
+	font-size: 5rem;
+	text-align: center;
+}
+
+/*------------------form-----------------*/
+form {
+	margin: $espace-grand 0;
+	padding: $espace-moyen;
+	border: $espace-petit solid darken($couleur_destination, 10%);
+	border-radius: $espace-moyen;
+	background-color: $couleur_destination;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	label {
+		width: 100%;
+		margin-bottom: $espace-moyen;
+		padding: $espace-petit;
+	}
+
+	input[type="text"],
+	[type="email"],
+	[type="date"],
+	[type="number"],
+	select {
+		width: 100%;
+		margin-bottom: $espace-moyen;
+		padding: $espace-petit;
+		border: solid 5px darken($couleur_destination, 20%);
+		border-radius: $espace-petit;
+
+	}
+
+	button[type="submit"],
+	[type="reset"] {
+		@extend .font;
+		@extend .button;
+		transition: all 0.3s;
+
+		&:hover {
+			transform: translateY(-$espace-petit);
+		}
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+/*--------------accessibilité------------*/
+.texte-pour-lecteur {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+
+/*-------------media querry--------------*/
+@media screen {
+	
+}

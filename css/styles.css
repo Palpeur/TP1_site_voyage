@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+/*---------------------------------------*/
+.font, form button[type=submit],
+form [type=reset], body {
+  color: #272727;
+  font-size: 1.5rem;
+  font-family: "Saira", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.button, form button[type=submit],
+form [type=reset], header .header-flex nav ul li a {
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: rgb(87.641025641, 216.6794871795, 239.358974359);
+  border: rgb(19.2307692308, 177.8846153846, 205.7692307692) solid 5px;
+}
+
+/*--------------général------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1ae475;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/*------------------Titre----------------*/
+h1 {
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px 0 10px 10px;
+}
+
+/*---------composante général------------*/
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #272727;
+}
+
+span {
+  color: rgb(167, 10, 41);
+}
+
+/*--------------header/footer------------*/
+header {
+  background-color: #29ceeb;
+  border-bottom: rgb(134.2820512821, 227.358974359, 243.7179487179) solid 20px;
+}
+header .header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .header-flex .logo-flex {
+  display: flex;
+  align-items: center;
+}
+header .header-flex .logo-flex .logo {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #272727;
+}
+header .header-flex .logo-flex img {
+  width: 15%;
+}
+header .header-flex nav ul {
+  padding: 0;
+}
+header .header-flex nav ul li {
+  text-decoration: none;
+  display: inline-block;
+  padding-right: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+header .header-flex nav ul li:hover {
+  transform: translateY(-10px);
+}
+main li {
+  transition: transform 0.3s;
+}
+main li:hover {
+  transform: translateY(-20px);
+}
+
+footer {
+  background-color: #f0e585;
+  padding: 20px 0;
+  border-top: rgb(245.5839416058, 238.6788321168, 178.4160583942) solid 20px;
+}
+footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*---------------animation---------------*/
+@keyframes avion {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*--------------------flex---------------*/
+.flex-destination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.flex-destination li {
+  border: rgb(17.625, 123.375, 52.875) solid 10px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: #18a848;
+}
+.flex-destination li img {
+  width: 100%;
+  border-radius: 10px;
+}
+.flex-destination li p {
+  padding: 10px;
+}
+
+/*------------class autre----------------*/
+#active {
+  background-color: rgb(17.0512820513, 157.7243589744, 182.4487179487);
+  border-color: rgb(14.8717948718, 137.5641025641, 159.1282051282);
+}
+
+.accueil {
+  animation: avion 3s ease-in;
+}
+
+.cours-3 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+/*------------------form-----------------*/
+form {
+  margin: 40px 0;
+  padding: 20px;
+  border: 10px solid rgb(17.625, 123.375, 52.875);
+  border-radius: 20px;
+  background-color: #18a848;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+form label {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+form input[type=text],
+form [type=email],
+form [type=date],
+form [type=number],
+form select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid 5px rgb(11.25, 78.75, 33.75);
+  border-radius: 10px;
+}
+form button[type=submit],
+form [type=reset] {
+  transition: all 0.3s;
+}
+form button[type=submit]:hover,
+form [type=reset]:hover {
+  transform: translateY(-10px);
+}
+form h1 {
+  font-size: 2rem;
+}
+
+/*--------------accessibilité------------*/
+.texte-pour-lecteur {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/*-------------media querry--------------*//*# sourceMappingURL=styles.css.map */
