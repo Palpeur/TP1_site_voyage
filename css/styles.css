@@ -123,6 +123,10 @@ footer {
   padding: 20px 0;
   border-top: rgb(245.5839416058, 238.6788321168, 178.4160583942) solid 20px;
 }
+footer .info-animation {
+  display: flex;
+  justify-content: space-between;
+}
 footer .footer-flex {
   display: flex;
   justify-content: space-between;
@@ -167,10 +171,6 @@ footer .footer-flex {
 
 .accueil {
   animation: avion 3s ease-in;
-}
-
-.info-animation {
-  display: flex;
 }
 
 /*------------------form-----------------*/
